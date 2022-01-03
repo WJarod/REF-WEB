@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using SpecializationService.Data;
 
 namespace SpecializationService
 {
@@ -27,6 +29,8 @@ namespace SpecializationService
         public void ConfigureServices(IServiceCollection services)
         {
 
+            // Ajout du context pour acceder à la base de donnée en local 
+            services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("Specialization"));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers();
             services.AddSwaggerGen(c =>
