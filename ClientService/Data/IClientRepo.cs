@@ -13,6 +13,8 @@ namespace ClientService.Data
 
         Client GetClientById(int id);
 
+        void VerifyClientByEmail(string email);
+
         void UpdateClientById(int id);
 
         void DeleteClientById(int id);
