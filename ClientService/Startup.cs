@@ -34,6 +34,7 @@ namespace ClientService
             
             // Ajout du context pour acceder à la base de donnée en local 
             services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("Client"));
+            services.AddScoped<IClientRepo, ClientRepo>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ClientService", Version = "v1" });

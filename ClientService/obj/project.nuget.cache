@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wOqOu62pkxBiDbjytTf+T2FGd9oIhFtVoId+DE+NmmeFHtXJDkKznNtIdi8tlbLbtvmiUCpjXtf3mufIxZI2eg==",
+  "dgSpecHash": "tzGjw/4iz3yKLU/i44vIDXpzxACmFd2B5WGrOG3kFpyu+B1XJvsqB0Q5WX/eRbYpREE56nQ5i17WcNiw0TpM1Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\wuill\\OneDrive\\Bureau\\RefWeb\\ClientService\\ClientService.csproj",
+  "projectFilePath": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\REF-WEB\\ClientService\\ClientService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wuill\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\wuill\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
