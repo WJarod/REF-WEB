@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: projectType-deployments
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: projectTypeservice
+  template:
+    metadata:
+      labels:
+        app: projectTypeservice
+    spec:
+      containers:
+        - name: projectTypeservice
+          image: wjarod/projectTypeservice:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: projectType-clusterip-server
+spec:
+  type: ClusterIP
+  selector:
+    app: projectTypeservice
+  ports:
+    - name: projectTypeservice
+      protocol: TCP
+      port: 80
+      targetPort: 80

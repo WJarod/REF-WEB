@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meet-deployments
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: meetservice
+  template:
+    metadata:
+      labels:
+        app: meetservice
+    spec:
+      containers:
+        - name: meetservice
+          image: wjarod/meetservice:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: meet-clusterip-server
+spec:
+  type: ClusterIP
+  selector:
+    app: meetservice
+  ports:
+    - name: meetservice
+      protocol: TCP
+      port: 80
+      targetPort: 80

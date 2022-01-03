@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: template-deployments
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: templateservice
+  template:
+    metadata:
+      labels:
+        app: templateservice
+    spec:
+      containers:
+        - name: templateservice
+          image: wjarod/templateservice:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: template-clusterip-server
+spec:
+  type: ClusterIP
+  selector:
+    app: templateservice
+  ports:
+    - name: templateservice
+      protocol: TCP
+      port: 80
+      targetPort: 80

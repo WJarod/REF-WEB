@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todoTemplate-deployments
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todoTemplateservice
+  template:
+    metadata:
+      labels:
+        app: todoTemplateservice
+    spec:
+      containers:
+        - name: todoTemplateservice
+          image: wjarod/todoTemplateservice:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: todoTemplate-clusterip-server
+spec:
+  type: ClusterIP
+  selector:
+    app: todoTemplateservice
+  ports:
+    - name: todoTemplateservice
+      protocol: TCP
+      port: 80
+      targetPort: 80

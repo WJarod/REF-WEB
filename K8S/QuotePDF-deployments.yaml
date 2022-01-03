@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quotePDF-deployments
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: quotePDFservice
+  template:
+    metadata:
+      labels:
+        app: quotePDFservice
+    spec:
+      containers:
+        - name: quotePDFservice
+          image: wjarod/quotePDFservice:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: quotePDF-clusterip-server
+spec:
+  type: ClusterIP
+  selector:
+    app: quotePDFservice
+  ports:
+    - name: quotePDFservice
+      protocol: TCP
+      port: 80
+      targetPort: 80
