@@ -32,6 +32,7 @@ namespace SpecializationService
             // Ajout du context pour acceder à la base de donnée en local 
             services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("Specialization"));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddScoped<ISpecializationRepo, SpecializationRepo>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
