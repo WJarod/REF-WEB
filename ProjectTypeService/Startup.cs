@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using ProjectTypeService.Data;
 
 namespace ProjectTypeService
 {
@@ -26,6 +28,10 @@ namespace ProjectTypeService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Instanciation des bases de donnée local ( phase de test )
+            services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("project_type"));
+
+            services.AddScoped<IProjectTypeRepo, ProjectTypeRepo>();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers();

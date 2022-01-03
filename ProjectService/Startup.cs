@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
+using ProjectService.Data;
 
 namespace ProjectService
 {
@@ -26,6 +28,10 @@ namespace ProjectService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Instanciation des bases de donnée local ( phase de test )
+            services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("project"));
+
+            services.AddScoped<IProjectRepo, ProjectRepo>();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers();
