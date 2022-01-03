@@ -1056,11 +1056,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wuill\\OneDrive\\Bureau\\RefWeb\\SpecializationService\\SpecializationService.csproj",
+      "projectUniqueName": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\REF-WEB\\SpecializationService\\SpecializationService.csproj",
       "projectName": "SpecializationService",
-      "projectPath": "C:\\Users\\wuill\\OneDrive\\Bureau\\RefWeb\\SpecializationService\\SpecializationService.csproj",
+      "projectPath": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\REF-WEB\\SpecializationService\\SpecializationService.csproj",
       "packagesPath": "C:\\Users\\wuill\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wuill\\OneDrive\\Bureau\\RefWeb\\SpecializationService\\obj\\",
+      "outputPath": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\REF-WEB\\SpecializationService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wuill\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TwhYxATf1Iz3bzdBg14VKFrXTEn4Ftfn2/6/OxwBNLligya14gIILTtUKNS8DnTt4RDTHBjDVYIxWVhZsJGRCQ==",
+  "dgSpecHash": "vlqassRK92+mBsAw2BLBhoZMY8/5tWO0uVZukSwI5lNENQfS+TJSB8k2AGCFB5mDTtAaWwwLNSxn9Bf4taMu6w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\wuill\\OneDrive\\Bureau\\RefWeb\\SpecializationService\\SpecializationService.csproj",
+  "projectFilePath": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\REF-WEB\\SpecializationService\\SpecializationService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wuill\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\wuill\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
